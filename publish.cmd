@@ -1,0 +1,1 @@
+dotnet pack --output .\output\ .\src\Telerik.DataSource.Mvc.Binder.csproj
