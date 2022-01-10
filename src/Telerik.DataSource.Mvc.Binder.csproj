@@ -10,7 +10,7 @@
     <PackageId>Telerik.DataSource.Mvc.Binder</PackageId>
     <IsPackable>true</IsPackable>
     <OutputType>Library</OutputType>
-    <Version>1.0.0</Version>
+    <Version>1.1.0</Version>
     <!--<PackageProjectUrl></PackageProjectUrl>-->
     <PackageLicenseExpression>LGPL-2.1-only</PackageLicenseExpression>
     <RepositoryType>git</RepositoryType>
