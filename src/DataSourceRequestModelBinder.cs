@@ -99,7 +99,7 @@ namespace Telerik.DataSource.Mvc.Binder
             };
             if(!string.IsNullOrEmpty(aggregates))
             {
-                request.Filters = DataSourceDescriptorDeserializer.Deserialize(DataSourceReflectionConsts.AggregateDescriptorFullName, aggregates);
+                request.Aggregates = DataSourceDescriptorDeserializer.Deserialize(DataSourceReflectionConsts.AggregateDescriptorFullName, aggregates);
             };
             return request;
         }
