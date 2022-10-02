@@ -1,0 +1,120 @@
+## 忽略Visual Studio临时文件、编译生成的文件
+## 常见的Visual Studio附加组件生成的文件
+
+# 用户独有的文件
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# 编译生成的文件
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+
+# Visual Studio 2015 缓存/选项 文件夹
+.vs/
+
+# MSTest 测试的结果
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# NUNIT 测试的结果
+*.VisualState.xml
+TestResult.xml
+
+*_i.c
+*_p.c
+*_i.h
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.log
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+
+# Visual Studio 分析工具
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+# TFS 2012 本地工作区
+$tf/
+
+# ReSharper (一个.NET代码插件)
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# Installshield 输出文件夹
+[Ee]xpress/
+
+# Click-Once 输出文件夹
+publish/
+
+# Web发布 输出文件夹
+*.[Pp]ublish.xml
+*.azurePubxml
+# TODO: 如果你想同步web部署设置，请注释下一行
+*.pubxml
+*.publishproj
+
+# NuGet包
+*.nupkg
+**/packages/*
+# 同步 build/, 它是 MSBuild 的目标文件夹.
+!**/packages/build/
+*.nuget.props
+*.nuget.targets
+
+# Visual Studio 缓存文件
+*.[Cc]ache
+!*.[Cc]ache/
+
+# 其他文件
+ClientBin/
+~$*
+*~
+*.dbmdl
+*.dbproj.schemaview
+*.pfx
+*.publishsettings
+node_modules/
+orleans.codegen.cs
+
+# SQL Server 文件
+*.mdf
+*.ldf
+
+# Visual Studio 中的 Node.js 工具
+.ntvs_analysis.dat
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# 当前项目
+!packages/.gitkeep
