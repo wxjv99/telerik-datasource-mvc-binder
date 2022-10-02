@@ -63,6 +63,50 @@ namespace Telerik.DataSource.Mvc.Binder
         }
 
         /// <summary>
+        /// 使用 自定义的参数 创建 DataSourceRequest
+        /// </summary>
+        /// <param name="page">页码</param>
+        /// <param name="pageSize">页内容条数</param>
+        /// <param name="sorts">排序</param>
+        /// <param name="filters">过滤</param>
+        /// <returns>DataSourceRequest 对象</returns>
+        public static dynamic CreateDataSourceRequest(int page, int pageSize, string sorts, string filters) => CreateDataSourceRequest(page, pageSize, sorts, filters, null, null);
+
+        /// <summary>
+        /// 使用 自定义的参数 创建 DataSourceRequest
+        /// </summary>
+        /// <param name="page">页码</param>
+        /// <param name="pageSize">页内容条数</param>
+        /// <param name="sorts">排序</param>
+        /// <param name="filters">过滤</param>
+        /// <param name="groups">分组</param>
+        /// <param name="aggregates">聚合</param>
+        /// <returns>DataSourceRequest 对象</returns>
+        public static dynamic CreateDataSourceRequest(int page, int pageSize, string sorts, string filters, string groups, string aggregates)
+        {
+            dynamic request = DataSourceReflectionHelper.ConstructDataSourceRequest();
+            request.Page = Math.Max(page, 1);
+            request.PageSize = Math.Max(pageSize, 0);
+            if(!string.IsNullOrEmpty(sorts))
+            {
+                request.Sorts = DataSourceDescriptorDeserializer.Deserialize(DataSourceReflectionConsts.SortDescriptorFullName, sorts);
+            };
+            if(!string.IsNullOrEmpty(filters))
+            {
+                request.Filters = DataSourceReflectionHelper.CreateFilterDescriptor(filters);
+            };
+            if(!string.IsNullOrEmpty(groups))
+            {
+                request.Groups = DataSourceDescriptorDeserializer.Deserialize(DataSourceReflectionConsts.GroupDescriptorFullName, groups);
+            };
+            if(!string.IsNullOrEmpty(aggregates))
+            {
+                request.Aggregates = DataSourceDescriptorDeserializer.Deserialize(DataSourceReflectionConsts.AggregateDescriptorFullName, aggregates);
+            };
+            return request;
+        }
+
+        /// <summary>
         /// 尝试从路由中获取指定值
         /// </summary>
         private static void TryGetValue<T>(ModelMetadata modelMetadata, IValueProvider valueProvider, string modelName, string key, Action<T> action)
