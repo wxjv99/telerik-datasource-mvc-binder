@@ -118,3 +118,5 @@ orleans.codegen.cs
 
 # 当前项目
 !packages/.gitkeep
+samples/AspNetCoreSample/wwwroot/libs/kendo-ui*/**
+!samples/AspNetCoreSample/wwwroot/libs/kendo-ui-trial/.gitkeep

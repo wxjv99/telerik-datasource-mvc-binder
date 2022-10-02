@@ -1,0 +1,43 @@
+@using System
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@(Html.Kendo().Grid<DataSourceModel>()
+    .Name("grid-dataSource")
+    .Columns(columns =>
+    {
+        columns.Bound(p => p.Id);
+        columns.Bound(p => p.Name).ClientFooterTemplate("<span>Count: #= count #</span>");
+        columns.Bound(p => p.Value).ClientFooterTemplate("<span>Min: #= min #</span><span>Max: #= max #</span><span>Sum: #= sum #</span><span>Average: #= average.toFixed(2) #</span>");
+        columns.Command(config => config.Edit());
+    })
+    .Editable(config => config.Mode(GridEditMode.InLine))
+    .Pageable()
+    .Sortable(config => config.SortMode(GridSortMode.MultipleColumn))
+    .Filterable(config => config.Mode(GridFilterMode.Row))
+    .Groupable()
+    .DataSource(ds => ds
+        .WebApi()
+        .Model(config => config.Id(p => p.Id))
+        .ServerOperation(true)
+        .Read(config => config.Action("DataSource", "Home"))
+        .Update(config => config.Action("DataSource", "Home"))
+        .PageSize(10)
+        .Sort(config => config.Add(p => p.Name).Descending())
+        .Filter(config => config.Add(p => p.Value).IsGreaterThan(10))
+        .Aggregates(config =>
+        {
+            config.Add(p => p.Name).Count();
+            config.Add(p => p.Value).Min().Max().Sum().Average();
+        })
+        .Events(config => config.Error("gridErrorHandler"))
+    )
+)
+
+<script>
+    function gridErrorHandler(e) {
+        e.sender.cancelChanges();
+    }
+</script>

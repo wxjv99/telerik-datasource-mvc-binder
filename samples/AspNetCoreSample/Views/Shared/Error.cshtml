@@ -1,0 +1,29 @@
+@{
+    var cultureName = System.Globalization.CultureInfo.CurrentCulture.Name;
+}
+
+<!DOCTYPE html>
+<html lang="@(cultureName)">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AspNetCoreSample</title>
+    <link rel="stylesheet" type="text/css" href="~/libs/kendo-ui-trial/css/kendo.common-office365.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/libs/kendo-ui-trial/css/kendo.office365.min.css" />
+    @RenderSection("Styles", false)
+    <script type="text/javascript" src="~/libs/kendo-ui-trial/js/jquery.min.js"></script>
+    <script type="text/javascript" src="~/libs/kendo-ui-trial/js/kendo.all.min.js"></script>
+    <script type="text/javascript" src="~/libs/kendo-ui-trial/js/kendo.aspnetmvc.min.js"></script>
+    <script type="text/javascript" src="~/libs/kendo-ui-trial/js/cultures/kendo.culture.@(cultureName).min.js"></script>
+    <script type="text/javascript" src="~/libs/kendo-ui-trial/js/messages/kendo.messages.@(cultureName).min.js"></script>
+    <script type="text/javascript">
+        kendo.culture('@(cultureName)');
+    </script>
+</head>
+<body>
+    <div class="container">
+        @RenderBody()
+    </div>
+    @await RenderSectionAsync("Scripts", false)
+</body>
+</html>
