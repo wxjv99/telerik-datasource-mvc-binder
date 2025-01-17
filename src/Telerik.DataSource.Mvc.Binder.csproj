@@ -1,9 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net6.0;net5.0;netcoreapp3.1;netstandard2.1</TargetFrameworks>
-    <LangVersion>8.0</LangVersion>
-    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <TargetFrameworks>net8.0;net6.0;netstandard2.1</TargetFrameworks>
+    <LangVersion>12</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
     <AssemblyName>Telerik.DataSource.Mvc.Binder</AssemblyName>
     <RootNamespace>Telerik.DataSource.Mvc.Binder</RootNamespace>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
@@ -11,11 +12,12 @@
     <PackageId>TelerikDS.Mvc.Binder</PackageId>
     <IsPackable>true</IsPackable>
     <OutputType>Library</OutputType>
-    <Version>1.1.0</Version>
+    <Version>1.2.0</Version>
     <PackageLicenseExpression>LGPL-2.1-only</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/wxjv99/telerik-datasource-mvc-binder/</RepositoryUrl>
-    <Authors>wxjv99</Authors>
+    <Authors>Valve Wang</Authors>
   </PropertyGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' != 'netstandard2.1'">
@@ -24,7 +26,10 @@
 
   <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.1'">
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="*" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
 
 </Project>

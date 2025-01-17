@@ -50,8 +50,9 @@ public class HomeController : Controller
             if (result == null)
             {
                 return StatusCode(404);
-
             }
+
+            _logger.LogInformation("Data(id={Id}) has been modified.", result.Id);
 
             dsr.Data = new DataSourceModel[]
             {
