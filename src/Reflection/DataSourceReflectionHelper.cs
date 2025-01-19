@@ -1,7 +1,7 @@
 using System.Reflection;
-using Telerik.DataSource.Mvc.Binder.Extensions;
+using TelerikDS.Mvc.Binder.Extensions;
 
-namespace Telerik.DataSource.Mvc.Binder.Reflection;
+namespace TelerikDS.Mvc.Binder.Reflection;
 
 /// <summary>
 /// 使用反射调用DataSource相关方法的辅助器

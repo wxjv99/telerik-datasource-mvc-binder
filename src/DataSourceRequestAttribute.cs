@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Telerik.DataSource.Mvc.Binder;
+namespace TelerikDS.Mvc.Binder;
 
 /// <summary>
 /// 用以使用 <see cref="DataSourceRequestModelBinder"/> 来构建并向 DataSourceRequest 绑定值的属性

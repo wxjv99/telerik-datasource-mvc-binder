@@ -1,4 +1,4 @@
-namespace Telerik.DataSource.Mvc.Binder;
+namespace TelerikDS.Mvc.Binder;
 
 /// <summary>
 /// DataSourceRequest 的参数名

@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc.ModelBinding;
-using Telerik.DataSource.Mvc.Binder.Reflection;
+using TelerikDS.Mvc.Binder.Reflection;
 
-namespace Telerik.DataSource.Mvc.Binder;
+namespace TelerikDS.Mvc.Binder;
 
 /// <summary>
 /// 构建并绑定值到 DataSourceRequest 的模型绑定器
@@ -10,7 +10,6 @@ public class DataSourceRequestModelBinder : IModelBinder
 {
     public virtual Task BindModelAsync(ModelBindingContext bindingContext)
     {
-
         dynamic model = CreateDataSourceRequest(bindingContext.ValueProvider, bindingContext.ModelName);
         bindingContext.Result = ModelBindingResult.Success(model);
         return Task.CompletedTask;

@@ -1,6 +1,6 @@
-using Telerik.DataSource.Mvc.Binder.Reflection;
+using TelerikDS.Mvc.Binder.Reflection;
 
-namespace Telerik.DataSource.Mvc.Binder;
+namespace TelerikDS.Mvc.Binder;
 
 /// <summary>
 /// 数据源描述器对象的反序列化器

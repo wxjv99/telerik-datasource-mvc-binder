@@ -1,6 +1,6 @@
 using System.Reflection;
 
-namespace Telerik.DataSource.Mvc.Binder.Extensions;
+namespace TelerikDS.Mvc.Binder.Extensions;
 
 internal static class ReflectionExtensions
 {

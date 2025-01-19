@@ -5,8 +5,8 @@
     <LangVersion>12</LangVersion>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <AssemblyName>Telerik.DataSource.Mvc.Binder</AssemblyName>
-    <RootNamespace>Telerik.DataSource.Mvc.Binder</RootNamespace>
+    <AssemblyName>TelerikDS.Mvc.Binder</AssemblyName>
+    <RootNamespace>TelerikDS.Mvc.Binder</RootNamespace>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <PackageId>TelerikDS.Mvc.Binder</PackageId>

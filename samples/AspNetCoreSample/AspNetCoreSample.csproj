@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Telerik.DataSource.Mvc.Binder.csproj" />
+    <ProjectReference Include="..\..\src\TelerikDS.Mvc.Binder.csproj" />
   </ItemGroup>
 
 </Project>

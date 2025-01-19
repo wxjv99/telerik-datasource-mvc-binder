@@ -6,8 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using System.Text.Json;
 using Telerik.DataSource;
-using DataSourceRequest = Telerik.DataSource.DataSourceRequest;
-using DataSourceRequestAttribute = Telerik.DataSource.Mvc.Binder.DataSourceRequestAttribute;
 
 namespace AspNetCoreSample.Controllers;
 

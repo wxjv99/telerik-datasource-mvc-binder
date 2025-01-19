@@ -1,4 +1,4 @@
-namespace Telerik.DataSource.Mvc.Binder.Reflection;
+namespace TelerikDS.Mvc.Binder.Reflection;
 
 internal static class DataSourceReflectionConsts
 {
